@@ -1,8 +1,3 @@
-let PORT=8080
-let CORSANYWHERE_BLACKLIST="https://abuse.example.com,http://abuse.example.com"
-let CORSANYWHERE_RATELIMIT="50 3 dufferpools.com www.dufferpools.com"
-let CORSANYWHERE_WHITELIST="http://dufferpools.com"
-
 
 // Listen on a specific host via the HOST environment variable
 var host = process.env.HOST || '0.0.0.0';
