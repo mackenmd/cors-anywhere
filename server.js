@@ -31,19 +31,22 @@ log.log(`port = ${port}`);
 // again. CORS Anywhere is open by design, and this blacklist is not used, except for countering
 // immediate abuse (e.g. denial of service). If you want to block all origins except for some,
 // use originWhitelist instead.
-var originBlacklist = parseEnvList(process.env.CORSANYWHERE_BLACKLIST);
-var originWhitelist = parseEnvList(process.env.CORSANYWHERE_WHITELIST);
-function parseEnvList(env) {
-  log.log('parseEnvList', log.begin);
+var originBlacklist = parseEnvList(process.env.CORSANYWHERE_BLACKLIST, "CORSANYWHERE_BLACKLIST");
+var originWhitelist = parseEnvList(process.env.CORSANYWHERE_WHITELIST, "CORSANYWHERE_WHITELIST");
+function parseEnvList(env, envDescription) {
+  log.log(`Parsing ${envDescription} env variable with the value of ${env}`, log.begin);
 
   let parseEnvArray = [];
   if (env) {
     parseEnvArray = env.split(',');
   }
 
-  log.log(`Env list of ${env} parsed into`, log.begin);
+  log.log(`parsed items`, log.begin);
   parseEnvArray.forEach(item => log.log(`${item}`));
-  log.log(`Env list of ${env} parsed into`, log.end);
+  log.log(`parsed items`, log.end);
+
+  log.log(`Parsing ${envDescription} env variable with the value of ${env}`, log.end);
+
 
   return parseEnvArray;
 }
