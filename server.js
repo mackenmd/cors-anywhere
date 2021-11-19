@@ -59,6 +59,8 @@ log.log('Starting server', log.end);
 
 var cors_proxy = require('./lib/cors-anywhere');
 
+log.log('Creating proxy server', log.begin);
+
 let proxyServer = cors_proxy.createServer({
   originBlacklist: originBlacklist,
   originWhitelist: originWhitelist,
@@ -85,8 +87,13 @@ let proxyServer = cors_proxy.createServer({
   },
 });
 
+log.log('Creating proxy server', log.end);
+
+log.log('Listening for incoming request', log.begin);
 proxyServer.listen(port, host, function() {
   console.log('Running CORS Anywhere on ' + host + ':' + port);
 
   log.log("Just an initial test");
 });
+log.log('Listening for incoming request', log.end);
+
