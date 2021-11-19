@@ -1,5 +1,14 @@
 var log = require ('./logs');
 
+let logLevels = process.env.LOGLEVELS ?? 99;
+
+log.turnLoggingOn();
+
+log.setMaximumIndentLevel(logLevels);
+
+log.log(`logLevels: ${logLevels}`);
+
+
 // Listen on a specific host via the HOST environment variable
 var host = process.env.HOST || '0.0.0.0';
 // Listen on a specific port via the PORT environment variable
@@ -48,8 +57,6 @@ cors_proxy.createServer({
   },
 }).listen(port, host, function() {
   console.log('Running CORS Anywhere on ' + host + ':' + port);
-  log.turnLoggingOn();
-  log.setMaximumIndentLevel(99);
 
   log.log("Just an initial test");
 });
