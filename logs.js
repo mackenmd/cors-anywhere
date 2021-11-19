@@ -9,6 +9,12 @@ exports.end = "END";
 exports.indent = "indent";
 exports.outdent = "oudent";
 
+let begin = "BEGIN";
+let end = "END";
+let indent = "indent";
+let outdent = "oudent";
+
+
 let timeTracker = [];
 
 exports.turnLoggingOn = function () {
