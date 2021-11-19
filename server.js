@@ -34,10 +34,18 @@ log.log(`port = ${port}`);
 var originBlacklist = parseEnvList(process.env.CORSANYWHERE_BLACKLIST);
 var originWhitelist = parseEnvList(process.env.CORSANYWHERE_WHITELIST);
 function parseEnvList(env) {
-  if (!env) {
-    return [];
+  log.log('parseEnvList', log.begin);
+
+  let parseEnvArray = [];
+  if (env) {
+    parseEnvArray = env.split(',');
   }
-  return env.split(',');
+
+  log.log(`Env list of ${env} parsed into array of ${parseEnvArray}`);
+
+  log.log('parseEnvList', log.end);
+
+  return parseEnvArray;
 }
 
 log.log('Starting server', log.end);
