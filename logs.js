@@ -11,13 +11,13 @@ exports.outdent = "oudent";
 
 let timeTracker = [];
 
-exports.turnLoggingOn() {
+exports.turnLoggingOn = function () {
    loggingIsOn = true;
    
    indentLevel = 0;
 }
 
-exports.setMaximumIndentLevel(maxIndentLevel) {
+exports.setMaximumIndentLevel  = function (maxIndentLevel) {
    maximumIndentLevel = maxIndentLevel;
 }
 
