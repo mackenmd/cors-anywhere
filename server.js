@@ -1,12 +1,16 @@
 var log = require ('./logs');
 
 let logLevels = process.env.LOGLEVELS ?? 99;
+let logging = (process.env.LOGGING ?? "false") == "true";
 
-log.turnLoggingOn();
+if (logging) {
+  log.turnLoggingOn();
+  log.setMaximumIndentLevel(logLevels);
+  log.log(`logLevels: ${logLevels}`);
+} else {
+  console.log('Expanded logging is turned off');
+}
 
-log.setMaximumIndentLevel(logLevels);
-
-log.log(`logLevels: ${logLevels}`);
 
 
 // Listen on a specific host via the HOST environment variable
