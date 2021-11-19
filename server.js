@@ -1,4 +1,4 @@
-import * as log        from './libs/log.js';
+import * as log        from './log.mjs';
 
 // Listen on a specific host via the HOST environment variable
 var host = process.env.HOST || '0.0.0.0';
