@@ -6,7 +6,11 @@ let logging = (process.env.LOGGING ?? "false") == "true";
 if (logging) {
   log.turnLoggingOn();
   log.setMaximumIndentLevel(logLevels);
-  log.log(`logLevels: ${logLevels}`);
+
+  log.log('Initializing expanded logging', log.begin);
+  log.log('Expanded logging is turned on');
+  log.log(`logLevels set to: ${logLevels}`);
+  log.log('Initializing expanded logging', log.end);
 } else {
   console.log('Expanded logging is turned off');
 }
