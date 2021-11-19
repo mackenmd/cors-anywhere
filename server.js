@@ -1,3 +1,4 @@
+import * as log        from './libs/log.js';
 
 // Listen on a specific host via the HOST environment variable
 var host = process.env.HOST || '0.0.0.0';
@@ -47,4 +48,5 @@ cors_proxy.createServer({
   },
 }).listen(port, host, function() {
   console.log('Running CORS Anywhere on ' + host + ':' + port);
+  log.log("Just an initial test");
 });
