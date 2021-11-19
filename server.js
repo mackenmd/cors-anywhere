@@ -1,4 +1,4 @@
-import * as log        from './log.mjs';
+var log = require ('./log');
 
 // Listen on a specific host via the HOST environment variable
 var host = process.env.HOST || '0.0.0.0';
