@@ -4,40 +4,40 @@ let maximumIndentLevel = 999;
 
 let spacesPerIndentLevel = 5;
 
-export let begin = "BEGIN";
-export let end = "END";
-export let indent = "indent";
-export let outdent = "oudent";
+exports.begin = "BEGIN";
+exports.end = "END";
+exports.indent = "indent";
+exports.outdent = "oudent";
 
 let timeTracker = [];
 
-export function turnLoggingOn() {
+exports.turnLoggingOn() {
    loggingIsOn = true;
    
    indentLevel = 0;
 }
 
-export function setMaximumIndentLevel(maxIndentLevel) {
+exports.setMaximumIndentLevel(maxIndentLevel) {
    maximumIndentLevel = maxIndentLevel;
 }
 
 
-export function turnLoggingOff() {
+exports.turnLoggingOff() {
    loggingIsOn = false;
 }
 
 
-export function pauseLogging() {
+exports.pauseLogging() {
    loggingIsOn = false;
 }
 
 
-export function resumeLogging() {
+exports.resumeLogging() {
    loggingIsOn = true;
 }
 
 
-export function log(msg, beginOrEnd, forceOn = false) {
+exports.log(msg, beginOrEnd, forceOn = false) {
    let loggingStatus = loggingIsOn;
    
    if (forceOn) {
