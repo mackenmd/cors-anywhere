@@ -48,5 +48,8 @@ cors_proxy.createServer({
   },
 }).listen(port, host, function() {
   console.log('Running CORS Anywhere on ' + host + ':' + port);
+  log.turnLoggingOn();
+  log.setMaximumIndentLevel(99);
+
   log.log("Just an initial test");
 });
