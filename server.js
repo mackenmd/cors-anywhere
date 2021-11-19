@@ -41,9 +41,9 @@ function parseEnvList(env) {
     parseEnvArray = env.split(',');
   }
 
-  log.log(`Env list of ${env} parsed into array of ${parseEnvArray}`);
-
-  log.log('parseEnvList', log.end);
+  log.log(`Env list of ${env} parsed into`, log.begin);
+  parseEnvArray.foreach(item => log.log(`${item}`));
+  log.log(`Env list of ${env} parsed into`, log.end);
 
   return parseEnvArray;
 }
