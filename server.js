@@ -16,11 +16,16 @@ if (logging) {
 }
 
 
+log.log('Starting server', log.begin);
 
 // Listen on a specific host via the HOST environment variable
 var host = process.env.HOST || '0.0.0.0';
 // Listen on a specific port via the PORT environment variable
 var port = process.env.PORT || 8080;
+
+log.log(`host = ${host}`);
+log.log(`host = ${port}`);
+
 
 // Grab the blacklist from the command-line so that we can update the blacklist without deploying
 // again. CORS Anywhere is open by design, and this blacklist is not used, except for countering
@@ -34,6 +39,8 @@ function parseEnvList(env) {
   }
   return env.split(',');
 }
+
+log.log('Starting server', log.end);
 
 // Set up rate-limiting to avoid abuse of the public CORS Anywhere server.
 var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELIMIT);
