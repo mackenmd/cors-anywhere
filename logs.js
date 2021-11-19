@@ -22,22 +22,22 @@ exports.setMaximumIndentLevel(maxIndentLevel) {
 }
 
 
-exports.turnLoggingOff() {
+exports.turnLoggingOff = function () {
    loggingIsOn = false;
 }
 
 
-exports.pauseLogging() {
+exports.pauseLogging =  function () {
    loggingIsOn = false;
 }
 
 
-exports.resumeLogging() {
+exports.resumeLogging = function () {
    loggingIsOn = true;
 }
 
 
-exports.log(msg, beginOrEnd, forceOn = false) {
+exports.log = function (msg, beginOrEnd, forceOn = false) {
    let loggingStatus = loggingIsOn;
    
    if (forceOn) {
