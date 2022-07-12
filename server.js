@@ -10,7 +10,7 @@ if (logging) {
   log.setMaximumIndentLevel(logLevels);
 
   log.log('Initializing expanded logging', log.begin);
-  log.log('Expanded logging is turned on');
+  log.log('Expanded logging is turned on!');
   log.log(`logLevels set to: ${logLevels}`);
   log.log('Initializing expanded logging', log.end);
 } else {
