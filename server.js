@@ -1,5 +1,7 @@
 var log = require ('./logs');
 
+// 2022-07-12 test
+
 let logLevels = process.env.LOGLEVELS ?? 99;
 let logging = (process.env.LOGGING ?? "false") == "true";
 
