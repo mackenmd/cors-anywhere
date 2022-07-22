@@ -1,6 +1,6 @@
-let utils = require ('./utils.js');
+let utils = require('./utils.js');
 
-exports.order = function (...args) {
+exports.order = function(...args) {
    let compareFunctions = [];
 
    for (let i = 0; i < args.length; i++) {
