@@ -1,4 +1,4 @@
-let log = require('./log.js');
+let log = require('./logs.js');
 let utils = require('./utils.js');
 
 
