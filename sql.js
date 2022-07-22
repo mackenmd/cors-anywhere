@@ -476,12 +476,12 @@ exports.sum2 = function(arrx, groupFields, sumField, cntField, avgField) {
 
 
 exports.sum3 = function(arrx, groupFields, sumFields, cntField) {
-   log.log(`sum3`, log.begin);
+//    log.log(`sum3`, log.begin);
    
    if (arrx.length === 0) {
-      log.log(`no records to sum`);
+    //   log.log(`no records to sum`);
 
-      log.log(`sum3`, log.end);
+    //   log.log(`sum3`, log.end);
 
       return [];
    }
@@ -553,7 +553,7 @@ exports.sum3 = function(arrx, groupFields, sumFields, cntField) {
    
    pushToArray();
    
-   log.log(`sum3`, log.end);
+//    log.log(`sum3`, log.end);
    
    return newArray;
    
