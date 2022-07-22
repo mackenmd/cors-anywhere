@@ -108,7 +108,7 @@ exports.getFlattenedPropertyList = function(obj, p = [], properties = {}) {  // 
    
    for (property in obj) {
       if (obj.hasOwnProperty(property)) {
-         if (typeCheck(obj[property]) == "object") {
+         if (exports.typeCheck(obj[property]) == "object") {
             let newp = [...p, property];
             properties = getFlattenedPropertyList(obj[property], newp, properties);
          }
