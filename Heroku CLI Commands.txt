@@ -1,0 +1,99 @@
+==== Get a list of help topics 
+heroku help
+
+==== Restart a dyno
+heroku restart --app=protected-woodland-80151
+
+==== Get heroku status (Apps, Data, Tools)
+heroku status 
+
+==== Online help
+https://devcenter.heroku.com/articles/heroku-cli-commands
+
+==== Update the Heroku to the latest version
+heroku update
+
+==== Get list of Apps
+heroku apps
+
+==== Create a new app and specify a name (silly-puddy)
+heroku apps:create silly-puddy
+
+==== Create a new app and have Heroku make up a name
+heroku apps:create
+
+==== Rename an app (Change silly-puddy to silliest-puddy)
+heroku apps:rename -app=silly-puddy silliest-puddy
+
+==== Destroy an app (Permanently delete silly-puddy)
+heroku apps:destroy --app=silly-puddy
+
+==== List favorite Heroku apps
+heroku apps:favorites
+
+==== Make an app a favorite app.
+heroku apps:favorites:add --app=silly-puddy
+
+==== Remove an app from favorite list.
+heroku apps:favorites:remove --app=silly-puddy
+
+==== Get detailed app information
+heroku apps:info --app=pacific-atoll-88892
+
+==== Open app in a web browser
+heroku apps:open --app=pacific-atoll-88892
+
+=== Show the list of available stacks (https://devcenter.heroku.com/articles/stack#:~:text=A%20stack%20is%20an%20operating,Linux%20distribution%2C%20such%20as%20Ubuntu)
+heroku apps:stacks --app=pacific-atoll-88892
+
+==== Set the stack of an app
+heroku stack:set heroku-20 --app=mybrarymack
+
+==== Display the current logged in user
+heroku auth:whoami
+
+==== Display the buildpacks for an app
+heroku buildpacks --app=pacific-atoll-88892
+
+==== Specify a buildpack during app creation
+heroku create mark-mack-test1 --buildpack heroku/nodejs
+
+==== List SSL certificates for an app
+heroku certs --app=pacific-atoll-88892
+
+==== Display the current maintenance status of app
+heroku maintenance --app=pacific-atoll-88892
+
+==== Display the current maintenance status of app
+heroku maintenance:on --app=pacific-atoll-88892
+
+==== Set maintenance status to on for an app
+heroku maintenance:on --app=protected-woodland-80151
+
+==== Set maintenance status to off for an app
+heroku maintenance:off --app=protected-woodland-80151
+
+==== display notifications
+heroku notifications --app=protected-woodland-80151
+
+==== Stop a dyno
+heroku ps:stop DYNO --app=--app=protected-woodland-80151
+
+==== lists processes (web and other dynos) for an app
+heroku ps --app=protected-woodland-80151
+
+====  list previous 50 versions of your app
+heroku releases --app=pacific-atoll-88892 -n50
+
+==== lists your add-ons and attachments
+heroku addons  --app=pacific-atoll-88892 -n50
+
+==== run heroku app locally (https://devcenter.heroku.com/articles/heroku-local)
+heroku local
+
+==== display recent AND FUTURE log output
+heroku logs --tail --app=pacific-atoll-88892
+
+==== adds a git remote to an app repo
+heroku git:remote -a duffer-pools-app
+
