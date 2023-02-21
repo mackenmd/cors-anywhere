@@ -68,7 +68,7 @@ exports.log = function (msg, beginOrEnd, forceOn = false) {
    if (beginOrEnd === begin) {
       indentLevel += 1;
 
-      prefix = "BEG: ";
+      prefix = "BEGG: ";
       
       let timedEvent = timeTracker.find(x => x.eventToTrack === msg);
       
