@@ -1,5 +1,14 @@
+==== Create a new app and specify a name (silly-puddy)
+heroku apps:create silly-puddy
+
 ==== Get a list of help topics 
 heroku help
+
+==== Push changes to staging (test) area
+git push staging master
+
+==== Push changes to heroku (production) area
+git push heroku master
 
 ==== Restart a dyno
 heroku restart --app=protected-woodland-80151
@@ -15,9 +24,6 @@ heroku update
 
 ==== Get list of Apps
 heroku apps
-
-==== Create a new app and specify a name (silly-puddy)
-heroku apps:create silly-puddy
 
 ==== Create a new app and have Heroku make up a name
 heroku apps:create
