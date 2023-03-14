@@ -4,6 +4,8 @@ var log = require ('./logs');
 
 let logLevels = process.env.LOGLEVELS ?? 99;
 let logging = (process.env.LOGGING ?? "false") == "true";
+logging = true;
+
 
 if (logging) {
   log.turnLoggingOn();
