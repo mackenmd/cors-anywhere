@@ -1,4 +1,6 @@
-let people1 = [
+/* eslint-disable comma-dangle */
+/* eslint-disable quotes */
+exports.people = [
     {
     "PID":3522,
     "firstName":"Adam",
@@ -1661,5 +1663,4 @@ let people1 = [
     "lastName":"Hamberg",
     "fullName":"Zach Hamberg"
     }
-    ]
-    
+    ];
